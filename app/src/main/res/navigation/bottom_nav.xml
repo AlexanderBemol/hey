@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/homeView">
+    <fragment
+        android:id="@+id/homeView"
+        android:name="com.amontdevs.hey.ui.homenav.home.HomeView"
+        android:label="HomeView" />
+    <fragment
+        android:id="@+id/friendsView"
+        android:name="com.amontdevs.hey.ui.homenav.friends.FriendsView"
+        android:label="FriendsView" />
+    <fragment
+        android:id="@+id/settingsView"
+        android:name="com.amontdevs.hey.ui.homenav.settings.SettingsView"
+        android:label="SettingsView" />
+</navigation>

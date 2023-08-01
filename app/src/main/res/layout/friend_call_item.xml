@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="@dimen/recent_card_width"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginEnd="@dimen/half_margin"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_call_friend_image"
+            android:layout_width="@dimen/friend_bd_item_image_size"
+            android:layout_height="@dimen/friend_bd_item_image_size"
+            android:src="@drawable/sample_girl"
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CircleShape"
+            />
+
+        <TextView
+            android:id="@+id/item_friend_call_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_friend_name"
+            android:textStyle="bold"
+            android:textSize="@dimen/item_title"
+            android:textAlignment="center"
+
+            app:layout_constraintTop_toBottomOf="@id/item_call_friend_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/half_margin"
+            android:layout_marginHorizontal="@dimen/half_margin"
+            />
+
+        <TextView
+            android:id="@+id/item_friend_call_datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_friend_call_datetime"
+            android:textStyle="normal"
+            android:textSize="@dimen/item_under_title"
+            android:textAlignment="center"
+
+            app:layout_constraintTop_toBottomOf="@id/item_friend_call_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/quarter_margin"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

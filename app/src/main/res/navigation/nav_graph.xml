@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashView">
+
+    <fragment
+        android:id="@+id/splashView"
+        android:name="com.amontdevs.hey.ui.splash.SplashView"
+        android:label="fragment_splash_view"
+        tools:layout="@layout/fragment_splash_view" >
+        <action
+            android:id="@+id/action_splashView_to_loadingView"
+            app:destination="@id/loadingView"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/splashView"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashView_to_homeNavigation"
+            app:destination="@id/homeNavigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadingView"
+        android:name="com.amontdevs.hey.ui.loading.LoadingView"
+        android:label="fragment_loading_view"
+        tools:layout="@layout/fragment_loading_view" >
+        <action
+            android:id="@+id/action_loadingView_to_homeNavigation"
+            app:destination="@id/homeNavigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeNavigation"
+        android:name="com.amontdevs.hey.ui.homenav.HomeNavigation"
+        android:label="HomeNavigation" />
+</navigation>

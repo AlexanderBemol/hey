@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splash_icon">250dp</dimen>
+    <dimen name="title_icon">64dp</dimen>
+
+    <dimen name="loading_image">300dp</dimen>
+
+    <dimen name="friend_item_image_size">75dp</dimen>
+    <dimen name="friend_bd_item_image_size">100dp</dimen>
+
+    <dimen name="quarter_margin">4dp</dimen>
+    <dimen name="half_margin">8dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="double_margin">32dp</dimen>
+    <dimen name="quad_margin">64dp</dimen>
+
+    <dimen name="description_ts">22sp</dimen>
+
+    <dimen name="item_title">20sp</dimen>
+    <dimen name="item_under_title">16sp</dimen>
+    <dimen name="item_description">22sp</dimen>
+    <dimen name="item_bd_description">18sp</dimen>
+
+    <dimen name="friends_list_item_title">18sp</dimen>
+    <dimen name="friends_list_under_title">14sp</dimen>
+    <dimen name="friends_list_description">18sp</dimen>
+
+    <dimen name="home_title">28sp</dimen>
+
+    <dimen name="recent_card_width">180dp</dimen>
+    <dimen name="option_height">60dp</dimen>
+
+</resources>
