@@ -17,10 +17,9 @@ class RandomUserRepository(
     private val localFileManager: ILocalFileManager
 ) : IRandomUserRepository {
     override suspend fun populateInitialData(): TaskResult<Unit> {
-        return if(randomUserRemote.getRandomUsers().isSuccessful){
-            //Add Network Validation?
-
-            try {
+        return try{
+            if(randomUserRemote.getRandomUsers().isSuccessful) {
+                //Add Network Validation?
                 val users = randomUserRemote.getRandomUsers().body()
                 val friendsList = mutableListOf<Friend>()
                 users?.results?.forEach {
@@ -43,14 +42,14 @@ class RandomUserRepository(
                     )
                 }
                 friendDao.insert(friendsList)
-            } catch (e : Exception) {
-                TaskResult.Error(e)
+                TaskResult.Success(Unit)
+            } else {
+                TaskResult.Error(Exception())
             }
-
-            TaskResult.Success(Unit)
-        } else {
-            TaskResult.Error(Exception())
+        } catch (e : Exception) {
+            TaskResult.Error(e)
         }
+
     }
 
     private fun downloadPhoto(pictureUrl: String): Bitmap {
